@@ -3,6 +3,9 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var moment = require('moment');
+var now = moment();
+var timestamp = now.format('h:mma');
 
 app.use(express.static(__dirname + '/public'));
 
